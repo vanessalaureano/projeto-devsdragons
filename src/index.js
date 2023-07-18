@@ -1,9 +1,13 @@
 import { Personagem } from "./modules/personagem.js";
+import { PersonagemView } from "./components/personagem-view.js";
+import { Mago } from "./modules/mago.js";
 
 const personagemPedrinho = new Personagem('Pedrinho', 7, 12, 5, 'Mago', '');
 
 const personagemJose = new Personagem('Jose', 7, 6, 3, 'Arqueiro', '');
 
-console.log('Insígnia de ' + personagemPedrinho.nome + ': ' + personagemPedrinho.obterInsignia())
+const personagens = [personagemPedrinho, personagemJose];
 
-console.log('Insígnia de ' + personagemJose.nome + ': ' + personagemJose.obterInsignia())
+new PersonagemView(personagens).render();
+
+console.log(new Mago('gelo', 7, 9))
